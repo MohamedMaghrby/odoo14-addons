@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_report_mrp_bom_inherit" inherit_id="mrp.report_mrp_bom">
+        <xpath expr="//th[@class='o_mrp_bom_cost text-right']" position="replace">
+            <th t-if="data['report_structure'] != 'bom_structure'" class="o_mrp_bom_cost text-right"
+                title="This is the cost based on the BoM of the product. It is computed by summing the costs of the components and operations needed to build the product.">
+                BoM Cost (1)</th>
+        </xpath>
+        <xpath expr="//th[@class='o_mrp_bom_cost text-right']" position="after">
+            <th t-if="data['report_structure'] != 'bom_structure'" class="o_mrp_price_bom text-right"
+                title="This is the cost based on the BoM of the product. It is computed by summing the costs of the components and operations needed to build the product.">
+                Price Bom
+            </th>
+            <th t-if="data['report_structure'] != 'bom_structure'" class="o_mrp_price_bom2 text-right">
+                BoM Cost (2)
+            </th>
+        </xpath>
+        <xpath expr="//tfoot/tr/td[@class='o_mrp_bom_cost text-right']" position="after">
+            <td t-if="data['report_structure'] != 'bom_structure'" class="o_mrp_bom_cost1 text-right">
+                <span><t t-esc="data['total1']"
+                         t-options='{"widget": "monetary", "display_currency": currency}'/></span>
+            </td>
+            <td t-if="data['report_structure'] != 'bom_structure'" class="o_mrp_bom_cost2 text-right">
+                <span><t t-esc="data['total2']"
+                         t-options='{"widget": "monetary", "display_currency": currency}'/></span>
+            </td>
+
+        </xpath>
+        <xpath expr="//td[@class='o_mrp_bom_cost text-right']" position="after">
+            <td t-if="data['report_structure'] != 'bom_structure'" class="o_mrp_price_bom text-right">
+                <span><t t-esc="data['bom_price']"
+                         t-options='{"widget": "monetary", "display_currency": currency}'/></span>
+            </td>
+
+            <td t-if="data['report_structure'] != 'bom_structure'" class="o_mrp_price_bom text-right">
+                <span><t t-esc="data['bom_price']*data['bom_qty']"
+                         t-options='{"widget": "monetary", "display_currency": currency}'/></span>
+            </td>
+        </xpath>
+    </template>
+    <template id="report_mrp_bom_line_inherit" inherit_id="mrp.report_mrp_bom_line">
+
+        <xpath expr="//td[@class='o_mrp_bom_cost text-right']" position="after">
+
+            <td class="o_mrp_bom_price text-right">
+                <span t-esc="l['bom_price']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+            </td>
+            <td class="o_mrp_bom_price2 text-right">
+                <span t-esc="l['bom_price']*l['prod_qty']"
+                      t-options='{"widget": "monetary", "display_currency": currency}'/>
+            </td>
+        </xpath>
+    </template>
+    <template id="report_mrp_bom_pdf_line_inherited" inherit_id="mrp.report_mrp_bom_pdf_line">
+        <xpath expr="//td[@class='o_mrp_bom_cost text-right']" position="after">
+
+            <td class="o_mrp_bom_price text-right">
+                <span t-esc="l['bom_price']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+            </td>
+            <td class="o_mrp_bom_price2 text-right">
+                <span t-esc="l['bom_price']*l['quantity']"
+                      t-options='{"widget": "monetary", "display_currency": currency}'/>
+            </td>
+        </xpath>
+    </template>
+</odoo>

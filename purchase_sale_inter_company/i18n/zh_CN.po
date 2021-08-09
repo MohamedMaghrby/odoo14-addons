@@ -1,0 +1,181 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_sale_inter_company
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-08-08 13:56+0800\n"
+"Last-Translator: Dong <dong@freshoo.cn>\n"
+"Language-Team: none\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2\n"
+"POT-Creation-Date: \n"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model,name:purchase_sale_inter_company.model_res_company
+msgid "Companies"
+msgstr "公司"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model,name:purchase_sale_inter_company.model_res_config_settings
+msgid "Config Settings"
+msgstr "配置设定"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_res_company__so_from_po
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_res_config_settings__so_from_po
+msgid "Create Sale Orders when buying to this company"
+msgstr "当关联公司向该公司采购时自动创建销售订单"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,help:purchase_sale_inter_company.field_res_company__warehouse_id
+msgid ""
+"Default value to set on Sale Orders that will be created based on Purchase "
+"Orders made to this company"
+msgstr "在销售订单上设置的默认值，这些订单将根据向该公司发出的采购订单创建"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,help:purchase_sale_inter_company.field_res_config_settings__warehouse_id
+msgid ""
+"Default value to set on Sale Orders that will be created based on Purchase "
+"Orders made to this company."
+msgstr "在销售订单上设置的默认值，这些订单将根据向该公司发出的采购订单创建。"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,help:purchase_sale_inter_company.field_res_company__so_from_po
+#: model:ir.model.fields,help:purchase_sale_inter_company.field_res_config_settings__so_from_po
+msgid ""
+"Generate a Sale Order when a Purchase Order with this company as supplier "
+"is created.\n"
+" The intercompany user must at least be Sale User."
+msgstr ""
+"当以该公司为供应商的采购订单被创建时，生成销售订单。\n"
+" 公司间用户必须至少是销售用户。"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_stock_picking__intercompany_picking_id
+msgid "Intercompany Picking"
+msgstr "公司间的拣选"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_res_company__intercompany_sale_user_id
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_res_config_settings__intercompany_sale_user_id
+msgid "Intercompany Sale User"
+msgstr "公司间销售用户"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model,name:purchase_sale_inter_company.model_account_move
+msgid "Journal Entries"
+msgstr "日记账目"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model,name:purchase_sale_inter_company.model_purchase_order
+msgid "Purchase Order"
+msgstr "采购订单"
+
+#. module: purchase_sale_inter_company
+#: model_terms:ir.ui.view,arch_db:purchase_sale_inter_company.res_config_settings_view_form
+msgid "Purchase/Sale"
+msgstr "公司间交易"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_res_company__sale_auto_validation
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_res_config_settings__sale_auto_validation
+msgid "Sale Orders Auto Validation"
+msgstr "销售订单自动验证"
+
+#. module: purchase_sale_inter_company
+#: model_terms:ir.ui.view,arch_db:purchase_sale_inter_company.res_config_settings_view_form
+msgid "Sale from purchase"
+msgstr "从采购到销售"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model,name:purchase_sale_inter_company.model_sale_order
+msgid "Sales Order"
+msgstr "销售订单"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model,name:purchase_sale_inter_company.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "销售订单行"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_sale_order__auto_purchase_order_id
+msgid "Source Purchase Order"
+msgstr "来源采购订单"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_sale_order_line__auto_purchase_line_id
+msgid "Source Purchase Order Line"
+msgstr "来源采购订单行"
+
+#. module: purchase_sale_inter_company
+#: code:addons/purchase_sale_inter_company/models/stock_picking.py:0
+#, python-format
+msgid ""
+"There's no corresponding line in PO %s for assigning qty from %s for "
+"product %s"
+msgstr "采购订单%s中没有对应的行用于分配%s中产品%s的数量"
+
+#. module: purchase_sale_inter_company
+#: code:addons/purchase_sale_inter_company/models/account_move.py:0
+#, python-format
+msgid "This vendor bill is related with: {}"
+msgstr "该供应商的账单与之相关。{}"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model,name:purchase_sale_inter_company.model_stock_picking
+msgid "Transfer"
+msgstr "转移"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,help:purchase_sale_inter_company.field_res_config_settings__intercompany_sale_user_id
+msgid ""
+"User used to create the sales order arising from a purchase order in "
+"another company."
+msgstr "用于创建由另一家公司的采购订单产生的销售订单的用户。"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_res_company__warehouse_id
+msgid "Warehouse For Sale Orders"
+msgstr "仓库销售订单"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,field_description:purchase_sale_inter_company.field_res_config_settings__warehouse_id
+msgid "Warehouse for Sale Orders"
+msgstr "仓库销售订单"
+
+#. module: purchase_sale_inter_company
+#: model:ir.model.fields,help:purchase_sale_inter_company.field_res_company__sale_auto_validation
+#: model:ir.model.fields,help:purchase_sale_inter_company.field_res_config_settings__sale_auto_validation
+msgid ""
+"When a Sale Order is created by a multi company rule for this company, it "
+"will automatically validate it."
+msgstr "当多公司规则为该公司创建销售订单时，它将自动验证它。"
+
+#. module: purchase_sale_inter_company
+#: code:addons/purchase_sale_inter_company/models/purchase_order.py:0
+#, python-format
+msgid "You can't cancel an order that is %s"
+msgstr "你不能取消一个 %s 的订单"
+
+#. module: purchase_sale_inter_company
+#: code:addons/purchase_sale_inter_company/models/purchase_order.py:0
+#, python-format
+msgid "You cannot create SO from PO because product '%s' is not intercompany"
+msgstr "您无法从采购订单创建订单，因为产品“%s”不是内部公司"
+
+#. module: purchase_sale_inter_company
+#: code:addons/purchase_sale_inter_company/models/purchase_order.py:0
+#, python-format
+msgid ""
+"You cannot create SO from PO because sale price list currency is different "
+"than purchase price list currency."
+msgstr ""
+"由于销售价目表货币与采购价目表货币不同，您无法从采购订单创建销售订单货币。"
